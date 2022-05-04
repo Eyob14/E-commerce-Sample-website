@@ -1,0 +1,18 @@
+<%- include('partials/header'); -%>
+
+<form action="/profileUpdate" method="post">
+  <h2>Update Your profile</h2>
+  <label for="fullName">Full Name</label>
+  <input type="text" name="fullName" />
+  <label for="password">Password</label>
+  <input type="password" name="password"/>
+  <div class="password error"></div>
+  <label for="location">Location</label>
+  <input type="text" name="location"/>
+  <label for="phoneNumber">Phone Number</label>
+  <input type="text" name="phoneNumber"/>
+  <button>Update</button>
+</form>
+
+
+<%- include('partials/footer'); -%>

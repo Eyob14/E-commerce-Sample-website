@@ -1,0 +1,17 @@
+<%- include('partials/header'); -%> <% if (products.length) { %> <%
+products.forEach(product => { %>
+<div class="cardContainer">
+  <a href="/detail/<%= product.dataValues.id%>">
+    <div class="card">
+      <img src="/smoothie.png" alt="smoothie recipe icon" />
+      <div class="container">
+        <h4>Product Name: <%= product.dataValues.name%></h4>
+        <p>
+          Available Amount: <%= product.dataValues.category.dataValues.amount %>
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+<% }) %> <% } %> 
+<%- include('partials/footer'); -%>

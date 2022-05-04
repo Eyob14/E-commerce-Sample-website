@@ -1,0 +1,24 @@
+<%- include('partials/header'); -%>
+
+<div class="profileUpdate">
+    <div class="card">
+        <div class="container">
+          <h4>Full Name: <span> <%= user.fullName%> </span> </h4>
+          <h4>
+            Email: <span> <%= user.email%> </span>
+          </h4>
+          <h4>
+            Location: <span> <%= user.location%> </span>
+          </h4>
+          <h4>
+            Gender: <span> <%= user.gender %> </span>
+          </h4>
+          <h4>
+            Phone Number: <span> <%= user.phoneNumber %> </span>
+          </h4>
+          <button><a href="/profileUpdate">Update</a></button>
+        </div>
+      </div>
+</div>
+
+<%- include('partials/footer'); -%>

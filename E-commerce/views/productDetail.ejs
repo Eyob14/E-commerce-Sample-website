@@ -1,0 +1,29 @@
+<%- include('partials/header'); -%>
+
+<div class="detailsContent">
+    <div class="card">
+        <img src="/smoothie.png" alt="smoothie recipe icon" />
+        <div class="container">
+          <h4>Product Name: <%= product.dataValues.name%> </h4>
+          <p>
+            Price: <%= product.dataValues.price%>
+          </p>
+          <p>
+            Description: <%= product.dataValues.description%>
+          </p>
+          <p>
+            Available Amount: <%= product.dataValues.category.dataValues.amount %>
+          </p>
+          <p>
+            Category: <%= product.dataValues.category.dataValues.name %>
+          </p>
+          <button><a href="/buyProduct/<%= product.dataValues.id%>">Buy</a></button>
+        </div>
+      </div>
+
+</div>
+
+
+
+
+<%- include('partials/footer'); -%>

@@ -1,0 +1,25 @@
+<%- include('partials/header'); -%>
+
+<form action="/product" method="post" enctype="multipart/form-data">
+  <h2>Add A New Product</h2>
+  <label for="name">Name</label>
+  <input type="text" name="name" required />
+  <label for="price">Price</label>
+  <input type="text" name="price" required />
+  <label for="description">Description</label>
+  <input type="text" name="description" required />
+  <label>Category</label>
+  <div class="category">
+    <input type="radio" id="cloth" name="category" value="1" />
+    <label for="cloth">Cloth</label><br />
+    <input type="radio" id="electronics" name="category" value="3" />
+    <label for="electronics">Electronics</label><br />
+    <input type="radio" id="cosmotics" name="category" value="2" />
+    <label for="cosmotics">Cosmotics</label>
+  </div>
+  <!-- <label for="image">Upload Image of the Product</label>
+  <input type="file" name="image" id="image" required /> -->
+  <button>Add</button>
+</form>
+
+<%- include('partials/footer'); -%>

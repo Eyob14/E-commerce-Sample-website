@@ -1,0 +1,16 @@
+<%- include('partials/header'); -%>
+
+<% console.log(user.id) %>
+<form action="/buyProduct/<%= product.dataValues.id%>" method="post">
+  <h2>Buy The Current Item</h2>
+  <label for="count">Number Of Item To Buy</label>
+  <input type="text" name="count" required />
+  <label for="accountNumber">Account Number</label>
+  <input type="text" name="accountNumber" required />
+  <input type="hidden" name="productId" value="<%= product.dataValues.category.dataValues.id %>" />
+  <input type="hidden" name="userId" value="<%= user.id %>" />
+  <input type="hidden" name="productPrice" value="<%= product.dataValues.price %>" />
+  <button>Buy</button>
+</form>
+
+<%- include('partials/footer'); -%>
